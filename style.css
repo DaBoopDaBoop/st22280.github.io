@@ -1,0 +1,574 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navigation Styles */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+nav img {
+  padding-left: 30px;
+  width: 300px;
+}
+
+nav ul li {
+  display: inline-block;
+  padding: 10px 50px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-size: 26px;
+  font-family: sans-serif;
+  color: #ffffff;
+  position: relative;
+}
+
+nav ul li a:hover {
+  color: rgb(187, 43, 43);
+}
+
+nav ul li a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: rgb(187, 43, 43);
+  bottom: -5px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+nav ul li a:hover::before {
+  transform: scaleX(1);
+}
+
+/* Background Styles */
+body, html {
+  height: 100%;
+}
+
+.bg {
+  background-image: url("/Images/mountain_view_dark.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Footer Styles */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #080808;
+  color: #fff;
+  padding: 20px 0;
+  box-shadow: 0px 0px 10px rgba(36, 35, 35, 0.5);
+  transition: transform 0.3s ease-in-out;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-logo img {
+  max-width: 100px;
+}
+
+.footer-links ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-links li {
+  margin: 0 15px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: sans-serif;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer-links a:hover {
+  color: #ff99c8;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.footer-hidden {
+  transform: translateY(100%);
+}
+
+/* Box Styles */
+.centered-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.outer-box {
+  background-color: transparent;
+  border: 10px solid #fff;
+  padding: 3px;
+}
+
+.inner-box {
+  background-color: rgba(255, 255, 255);
+  padding: 120px 240px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.inner-box h1 {
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.inner-box p {
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.sign-up-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  color: #030303;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+  font-family: 'Roboto', sans-serif;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.sign-up-button:hover {
+  background-color: #afaeae;
+}
+
+/* Textbox Container Styles */
+.textbox-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url("/Images/mountain_view_light.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.text-box {
+  color: white;
+  padding: 20px;
+  width: 80%;
+  max-width: 600px;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.text-box h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.text-box h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.text-box a {
+  display: inline-block;
+  background-color: #ff99c8;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Box Row Styles */
+.chalot-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 50px 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.chalot-box {
+  flex: 1;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Link Box Styles */
+.kereru-box {
+  background-size: cover;
+  background-position: center;
+  color: rgb(187, 43, 43);
+}
+
+.kakapo-box {
+  background-size: cover;
+  background-position: center;
+  color: rgb(158, 54, 54);
+}
+
+.pukeko-box {
+  background-size: cover;
+  background-position: center;
+  color: rgb(175, 72, 72);
+  padding-bottom: 21px;
+}
+
+.pukeko-box p{
+ padding-bottom: 20px;
+}
+
+
+/* Link Styles */
+.kereru-link,
+.kakapo-link {
+  border-top: solid 5px #bdb8b8;
+  height: 50px;
+  line-height: 50px;
+}
+
+.pukeko-link {
+  border-top: solid 5px #bdb8b8;
+  height: 50px;
+  line-height: 50px;
+}
+
+.kereru-link a,
+.kakapo-link a,
+.pukeko-link a {
+  color: #030303;
+  font-size: 21px;
+}
+
+/* Background Box Styles */
+.bg-1 {
+  background-image: url("/Images/mountain_view_light.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+.bg-2 {
+  background-image: url("/Images/mountain_view_light.jpg");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40vh;
+  position: relative;
+}
+
+.bg-2 nav {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+/* Contact Info Section */
+.contact-info {
+  padding: 100px 0;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+.contact-info h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.contact-details {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-details p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+}
+
+.contact-details ul {
+  list-style: none;
+  padding-left: 0;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.contact-details li {
+  margin-bottom: 15px;
+}
+
+.contact-details li:before {
+  content: "\2022";
+  color: #ff99c8;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+/* Join Section Styles */
+.join {
+  padding: 100px 0;
+  background-color: rgba(54, 111, 216, 0.8);
+  color: #fff;
+  text-align: center;
+}
+
+.join h2 {
+  font-size: 2.5rem;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.join p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.join-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.join-form label {
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  color: #000;
+}
+
+.join-form input,
+.join-form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #000000;
+  background-color: transparent;
+  color: #000000;
+}
+
+.join-form button {
+  padding: 10px 20px;
+  background-color: #ff99c8;
+  border: none;
+  color: #ffffff;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.join-form button:hover {
+  background-color: #ff66a3;
+}
+
+/* Contact Section Styles */
+.contact-section {
+  padding: 100px 0;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+/* Black Border Button Styles */
+.black-border-button {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid #000;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.black-border-button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Chalets Section Styles */
+.chalets {
+  background-color: #42abf1;
+  padding: 100px;
+}
+
+.kereru-chalet-image {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  background-color: #ffffff;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.kereru-chalet-image a {
+  display: inline-block;
+}
+
+.kereru-chalet-image img {
+  width: 300px; 
+  height: 250px; 
+  margin-right: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.kereru-chalet-image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.pukeko-chalet-image {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  background-color: #ffffff;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.pukeko-chalet-image a {
+  display: inline-block;
+}
+
+.pukeko-chalet-image img {
+  width: 300px; 
+  height: 250px; 
+  margin-right: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.pukeko-chalet-image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.kakapo-chalet-image {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  background-color: #ffffff;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.kakapo-chalet-image a {
+  display: inline-block;
+}
+
+.kakapo-chalet-image img {
+  width: 300px; 
+  height: 250px; 
+  margin-right: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.kakapo-chalet-image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.chalet h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.chalet-details {
+  flex: 1;
+  padding: 20px;
+}
+
+.chalet-title h2 {
+  font-size: 100px;
+  justify-content: center;
+  text-align: center;
+  color: rgb(187, 43, 43);
+  margin-bottom: 10px;
+}
+
+/*Chalet Text Styles*/
+.chalet h3 {
+  font-size: 45px;
+  margin-bottom: 35px;
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Roboto Mono', monospace;
+  color: rgb(187, 43, 43);
+}
+
+.chalet ul {
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Roboto Mono', monospace;
+  padding: 10px;
+  color: rgb(187, 43, 43);
+}
+
+.inner-box-2 {
+  background-color: #ffffff;
+  width: 100vh;
+  justify-content: center;
+  padding: 10px;
+  box-shadow: #000 10px;
+}
+
+.outer-box-2 {
+  border: 10px solid #fff;
+  padding: 3px;
+  display: inline-block;
+  margin: 50px; 
+  box-shadow: #000 10px;
+}

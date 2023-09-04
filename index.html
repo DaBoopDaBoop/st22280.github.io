@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maunga Club</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="bg">
+        <nav>
+            <a href="index.html">
+                <img src="/Images/Maunga_Club_white.png" alt="Maunga_logo">
+            </a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="accomadations.html">Accommodation</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="centered-box">
+        <div class="outer-box">
+            <div class="inner-box">
+                <h1>Welcome to Maunga Club</h1>
+                <p>Your ultimate adventure destination</p>
+                <a href="contact.html" class="sign-up-button">Sign Up</a>
+            </div>
+        </div>
+    </div>
+    <section class="contact-section">
+        <div class="container">
+            <h2 class="section-heading">Contact Us</h2>
+            <a href="contact.html" class="black-border-button">Get in Touch</a>
+        </div>
+    </section>
+<footer class="footer-hidden">
+    <div class="footer-content">
+        <div class="footer-logo">
+            <img src="/Images/Maunga_Club_white.png" alt="Maunga_logo">
+        </div>
+        <div class="footer-links">
+            <ul>
+                <li><a href="accomadations.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="signup.html">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2023 Maunga Website. All rights reserved by Mason.</p>
+    </div>
+    <script>
+        let lastScrollPosition = 0;
+        const footer = document.querySelector("footer");
+    
+        window.addEventListener("scroll", () => {
+            const currentScrollPosition = window.scrollY;
+            
+            if (currentScrollPosition > lastScrollPosition) {
+                footer.classList.add("footer-hidden");
+            } else {
+                footer.classList.remove("footer-hidden");
+            }
+    
+            lastScrollPosition = currentScrollPosition;
+        });
+    </script>
+</footer>
+</body>
+</html>
